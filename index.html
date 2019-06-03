@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quest</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="loc">
+		<img src="door.png" style="width: 100px; margin-left: 600px; height: 200px; margin-top: 300px;" class="d1">
+		<img src="door2.png" style="width: 100px; height: 200px; margin-top: 300px;" class="d2">
+		<img src="door3.png" style="width: 100px; height: 200px; margin-top: 300px;" class="d3">
+	</div>
+
+	<div style="background-image: url(bg.jpg); display: none; height: 800px; background-size: cover;" class="loc1">
+
+		<h2 class="text-white">Найди 3 вещь из поттера</h2><h2 class="text-white ch1">0</h2>
+		<h5 class="von1">выход</h5>
+
+		<div style="margin-left: 600px; display: block; position: absolute; margin-top: 300px;" class="rifle">
+			<img src="rifle.png" style="width: 50px;">
+		</div>
+
+		<div class="wand" style="margin-left: 300px;  margin-top: 150px; display: block; position: absolute;">
+			<img src="wand.png" style="width: 50px;">
+		</div>
+
+		<div class="ring" style="margin-left: 800px;  margin-top: 200px; display: block; position: absolute;">
+			<img src="ring.png" style="width: 50px;">
+		</div>
+
+		<div class="shirt" style="margin-left: 200px;  margin-top: 450px; display: block; position: absolute;">
+			<img src="shirt.png" style="width: 50px;">
+		</div>
+
+		<div class="metla" style="margin-left: 840px;  margin-top: 380px; display: block; position: absolute;">
+			<img src="metla.png" style="width: 50px;">
+		</div>
+
+	</div>
+
+	<div style="background-image: url(bg2.jpg); display: none; height: 800px; background-size: cover;" class="loc2">
+
+		<h2 class="text-white">Найди</h2><h2 class="text-white ch2">0</h2>
+		<h5 class="von2">Сбежать (Ты будешь трусом в глазах Италии)</h5>
+
+		<div style="margin-left: 600px; display: block; position: absolute; margin-top: 300px;" class="rifle2">
+			<img src="rifle.png" style="width: 50px;">
+		</div>
+
+		<div class="rocket" style="margin-left: 300px;  margin-top: 150px; display: block; position: absolute;">
+			<img src="rocket.png" style="width: 50px;">
+		</div>
+
+		<div class="sword" style="margin-left: 800px;  margin-top: 200px; display: block; position: absolute;">
+			<img src="sword.png" style="width: 50px;">
+		</div>
+
+		<div class="hat" style="margin-left: 200px;  margin-top: 450px; display: block; position: absolute;">
+			<img src="hat.png" style="width: 50px;">
+		</div>
+
+		<div class="metla2" style="margin-left: 840px;  margin-top: 380px; display: block; position: absolute;">
+			<img src="metla.png" style="width: 50px;">
+		</div>
+
+	</div>
+
+	<div style="display: none; height: 800px; background-size: cover; background-image: url(bg3.jpg)" class="loc3">
+
+		<h2 class="text-white">ЛОЛ, ты думал упасть туда? Тут стена!</h2>
+		<h5 class="von3">Закрыть дверь</h5>
+		<h2 class="text-white ch3">0</h2>
+		<div style="margin-left: 600px; display: block; position: absolute; margin-top: 300px;" class="rifle12">
+			<img src="rifle.png" style="width: 50px;">
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		let glass = 0;
+		let italia = 0;
+		let pp =0;
+
+		document.querySelector(".d1").onclick = function() { 
+    		alert("Ты попал в кабанохран"); 
+    		document.querySelector(".loc").style.display = "none"
+    		document.querySelector(".loc1").style.display = "block"
+		}
+
+		document.querySelector(".rifle").onclick = function() {
+			document.querySelector(".rifle").style.display = "none"
+			glass = glass - 1
+			document.querySelector(".ch1").innerHTML = glass;
+		}
+
+		document.querySelector(".wand").onclick = function() {
+			document.querySelector(".wand").style.display = "none"
+			glass = glass + 1
+			document.querySelector(".ch1").innerHTML = glass;
+		}
+
+		document.querySelector(".ring").onclick = function() {
+			document.querySelector(".ring").style.display = "none"
+			glass = glass - 1
+			document.querySelector(".ch1").innerHTML = glass;
+		}
+
+		document.querySelector(".shirt").onclick = function() {
+			document.querySelector(".shirt").style.display = "none"
+			glass = glass + 1
+			document.querySelector(".ch1").innerHTML = glass;
+		}
+
+		document.querySelector(".metla").onclick = function() {
+			document.querySelector(".metla").style.display = "none"
+			glass = glass + 1
+			document.querySelector(".ch1").innerHTML = glass;
+		}
+
+		document.querySelector(".von1").onclick = function() { 
+    		alert("Ты ушел отсюда, ЛОХ"); 
+    		document.querySelector(".loc1").style.display = "none"
+    		document.querySelector(".loc").style.display = "block"
+		}
+
+
+		document.querySelector(".d2").onclick = function() { 
+    		alert("Ты попал в Рим"); 
+    		document.querySelector(".loc").style.display = "none"
+    		document.querySelector(".loc2").style.display = "block"
+		}
+
+		document.querySelector(".rifle2").onclick = function() {
+			document.querySelector(".rifle2").style.display = "none"
+			italia = italia + 1
+			document.querySelector(".ch2").innerHTML = italia;
+		}
+
+		document.querySelector(".rocket").onclick = function() {
+			alert("Ракеты у них тоже есть")
+			document.querySelector(".rocket").style.display = "none"
+			italia = italia + 9999
+			document.querySelector(".ch2").innerHTML = italia;
+		}
+
+		document.querySelector(".sword").onclick = function() {
+			document.querySelector(".sword").style.display = "none"
+			italia = italia - 1
+			document.querySelector(".ch2").innerHTML = italia;
+		}
+
+		document.querySelector(".hat").onclick = function() {
+			document.querySelector(".hat").style.display = "none"
+			italia = italia + 1
+			document.querySelector(".ch2").innerHTML = italia;
+		}
+
+		document.querySelector(".metla2").onclick = function() {
+			document.querySelector(".metla2").style.display = "none"
+			italia = italia - 1
+			document.querySelector(".ch2").innerHTML = italia;
+		}
+
+		document.querySelector(".von2").onclick = function() { 
+    		alert("Ты ушел отсюда, ЛОХ"); 
+    		document.querySelector(".loc2").style.display = "none"
+    		document.querySelector(".loc").style.display = "block"
+		}
+
+		document.querySelector(".d3").onclick = function() { 
+    		alert("На двери написано: Там яма с шипами"); 
+    		document.querySelector(".loc").style.display = "none"
+    		document.querySelector(".loc3").style.display = "block"
+		}
+
+		document.querySelector(".rifle12").onclick = function() {
+			document.querySelector(".rifle").style.display = "none"
+			alert("У Tебя появился калаш")
+			glass = glass + 100
+			document.querySelector(".ch3").innerHTML = pp;
+		}
+
+		document.querySelector(".von3").onclick = function() { 
+    		alert("Ты Закрыл дверь и ушел"); 
+    		document.querySelector(".loc3").style.display = "none"
+    		document.querySelector(".loc").style.display = "block"
+    	}
+		</script>
+
+</body>
+</html>
